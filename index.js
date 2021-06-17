@@ -1,4 +1,4 @@
-console.log('working')
+console.log('bruno is a smelly dog')
 
 function initialize() {
     var MY_MAPTYPE_ID = 'custom_style';

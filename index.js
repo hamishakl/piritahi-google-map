@@ -1,3 +1,5 @@
+console.log('working')
+
 function initialize() {
     var MY_MAPTYPE_ID = 'custom_style';
     //var MY_MAPTYPE_ID = google.maps.MapTypeId.ROADMAP;

@@ -3,38 +3,131 @@ console.log('bruno is a smelly dog')
 function initialize() {
     var MY_MAPTYPE_ID = 'custom_style';
     //var MY_MAPTYPE_ID = google.maps.MapTypeId.ROADMAP;
-    var featureOpts = [{
-      stylers: [
-        //     { hue: '#890000' },
+    var featureOpts = [
         {
-          visibility: 'on'
+            "featureType": "administrative",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#444444"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.neighborhood",
+            "elementType": "labels",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#f2f2f2"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 45
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "labels.icon",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#c7eef4"
+                },
+                {
+                    "visibility": "simplified"
+                }
+            ]
         }
-      ]
-    }, {
-      elementType: 'labels',
-      stylers: [{
-        visibility: 'off'
-      }]
-    }, {
-      featureType: "administrative.country",
-      elementType: "labels",
-      stylers: [{
-        visibility: "off"
-      }]
-    }, {
-      featureType: "administrative.locality",
-      elementType: "labels",
-      stylers: [{
-        visibility: "off"
-      }]
-    }, {
-      featureType: 'road',
-      stylers: [{
-        color: '#00FF00'
-      }, {
-        visibility: 'off'
-      }]
-    }];
+    ]
   
   
     var mapOptions = {
@@ -54,12 +147,10 @@ function initialize() {
     };
   
     var flightPlanCoordinates = [
-      new google.maps.LatLng(40.7127, -74.0059),
-      new google.maps.LatLng(-27.46758, 153.027892)
+      
     ];
     var flightPlanCoordinates1 = [
-      new google.maps.LatLng(50.7127, -74.0059),
-      new google.maps.LatLng(-27.46758, 153.027892)
+   
     ];
   
     var flightArray = [];
@@ -87,13 +178,13 @@ function initialize() {
     }
     var citiesJSON = {
       geonames: [{
-        lat: 40.7127,
-        lng: -74.0059,
-        name: "New York"
+        lat: -36.91922,
+        lng: 174.74086,
+        name: "Roskill South"
       }, {
-        lat: -27.46758,
-        lng: 153.027892,
-        name: "Brisbane"
+        lat: -36.80267,
+        lng: 174.74426,
+        name: "Northcote"
       }, {
         lat: 50.7127,
         lng: -74.0059,
@@ -107,7 +198,7 @@ function initialize() {
         boxStyle: {
           border: "none",
           textAlign: "center",
-          fontSize: "8pt",
+          fontSize: "12pt",
           width: "100px"
         },
         disableAutoPan: true,

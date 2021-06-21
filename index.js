@@ -1,5 +1,4 @@
-console.log('output works ')
-console.log('second ooutput ')
+console.log('bruno is a smelly dog')
 
 function initialize() {
     var MY_MAPTYPE_ID = 'custom_style';
@@ -186,16 +185,42 @@ function initialize() {
     }
     var citiesJSON = {
       geonames: [{
-        lat: -36.91922,
-        lng: 174.74086,
+        lat: -36.91524,
+        lng: 174.73542,
         name: "Roskill South"
-      }, {
-        lat: -36.80267,
-        lng: 174.74426,
+      },{
+        lat: -36.79864,
+        lng: 174.74447,
         name: "Northcote"
-      }, {
+      },{
+        lat: -36.89212,
+        lng: 174.72037,
+        name: "Ōwairaka"
+      },{
+        lat: -36.92616,
+        lng: 174.74048,
+        name: "Waikōwhai"
+      },{
+        lat: -36.91142,
+        lng: 174.80049,
+        name: "Oranga"
+      },{
+        lat: -36.78879,
+        lng: 174.67151,
+        name: "Catalina Bay"
+      }, 
+      {
+        lat: -36.96161,
+        lng: 174.79355,
+        name: "Mangere West"
         
-      }]
+      }, 
+      {
+        lat: -36.97418,
+        lng: 174.82487,
+        name: "Aorere"
+      }
+    ]
     };
     var mapLabels = [];
     for (var i = 0; i < citiesJSON.geonames.length; i++) {

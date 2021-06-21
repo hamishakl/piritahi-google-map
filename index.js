@@ -76,6 +76,9 @@ function initialize() {
                 },
                 {
                     "lightness": 45
+                },
+                {
+                    "visibility": "off"
                 }
             ]
         },
@@ -93,7 +96,7 @@ function initialize() {
             "elementType": "all",
             "stylers": [
                 {
-                    "visibility": "simplified"
+                    "visibility": "off"
                 }
             ]
         },
@@ -136,11 +139,15 @@ function initialize() {
       mapTypeControlOptions: {
         mapTypeIds: [google.maps.MapTypeId.TERRAIN, MY_MAPTYPE_ID]
       },
-      mapTypeId: MY_MAPTYPE_ID
-    };
+      mapTypeId: MY_MAPTYPE_ID,
+      zoom: 12,
+      center: { lat: -36.84, lng: 174.76 },
+      disableDefaultUI: true,
+    }
   
     var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+      mapOptions)
+
   
     var styledMapOptions = {
       name: 'Custom Style'
@@ -186,9 +193,7 @@ function initialize() {
         lng: 174.74426,
         name: "Northcote"
       }, {
-        lat: 50.7127,
-        lng: -74.0059,
-        name: "Quebec"
+        
       }]
     };
     var mapLabels = [];
@@ -220,10 +225,18 @@ function initialize() {
         map: map,
         icon: {
           path: google.maps.SymbolPath.CIRCLE,
-          scale: 2
+          scale: 3
         }
       });
     }
   }
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map-canvas"), {
+      zoom: 4,
+      center: { lat: -33, lng: 151 },
+      disableDefaultUI: true,
+    });
+  }
+
   
   google.maps.event.addDomListener(window, 'load', initialize);

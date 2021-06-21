@@ -1,4 +1,5 @@
 console.log('output works ')
+console.log('second ooutput ')
 
 function initialize() {
     var MY_MAPTYPE_ID = 'custom_style';

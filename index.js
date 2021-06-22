@@ -230,7 +230,7 @@ function initialize() {
       {
         lat: -36.89212,
         lng: 174.72037,
-        name: "Ōwairaka",
+        name: "&#332wairaka",
       },
       {
         lat: -36.92616,
@@ -267,7 +267,7 @@ function initialize() {
         border: "none",
         textAlign: "center",
         fontSize: "12pt",
-        fontFamily: "fieldwork-hum",
+        fontFamily: "fieldwork-hum, arial",
         fontWeight: "600",
         width: "100px",
       },

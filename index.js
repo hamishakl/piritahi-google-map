@@ -312,6 +312,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != northcoteWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const roskillSouthWindow = new google.maps.InfoWindow({
@@ -329,6 +334,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != roskillSouthWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const owairakaWindow = new google.maps.InfoWindow({
@@ -346,6 +356,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != owairakaWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const waikowhaiWindow = new google.maps.InfoWindow({
@@ -363,6 +378,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != waikowhaiWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const orangaWindow = new google.maps.InfoWindow({
@@ -380,6 +400,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != orangaWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const catalinaBayWindow = new google.maps.InfoWindow({
@@ -397,6 +422,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != catalinaBayWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const mangereWestWindow = new google.maps.InfoWindow({
@@ -414,6 +444,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != mangereWestWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
 
   const aorereWindow = new google.maps.InfoWindow({
@@ -431,8 +466,26 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < infoWindows.length; i++) {
+      if (infoWindows[i] != aorereWindow) {
+        infoWindows[i].close()
+      }
+    }
   });
+
+  const infoWindows = [
+    mangereWestWindow,
+    aorereWindow,
+    northcoteWindow,
+    catalinaBayWindow,
+    owairakaWindow,
+    roskillSouthWindow,
+    waikowhaiWindow,
+    orangaWindow
+  ]
+
 }
+
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map-canvas"), {

@@ -1,7 +1,10 @@
 html,
-body,
 #map-canvas {
   height: 100%;
   margin: 0px;
   padding: 0px
+}
+
+body {
+  height: 100vh;
 }

@@ -3,35 +3,35 @@ let map, popup, Popup;
 const mapData = {
   northcoteData: {
     northcoteCoordinates: { lat: -36.79864, lng: 174.74447 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Northcote</h1><p>Phone number:</p><h5>0508 74748244 (ext 1)</h5> Northcote Info Cube, Northcote town centre.</br></br>Open hours: Wednesday - Saturday 10am - 4pm",
   },
   roskillSouthData: {
     roskillSouthCoordinates: { lat: -36.91524, lng: 174.73542 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Roskill South</h1><p>Phone number:</p><h5>0508 74748244 (ext 2)</h5>Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br></br>Open hours: Wednesday to Saturday, 10am to 4pm",
   },
   owairakaData: {
     owairakaCoordinates: { lat: -36.89212, lng: 174.72037 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Ōwairaka</h1><p>Phone number:</p><h5>0508 74748244 (ext 3)</h5> Owairaka Info Cube at 93 Richardson Road.</br></br>Open hours: Thursday and Saturday 10.00 am – 4.00 pm",
   },
   waikowhaiData: {
     waikowhaiCoordinates: { lat: -36.92616, lng: 174.74048 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Waikōwhai</h1><p>Phone number:</p><h5>0508 74748244 (ext 2)</h5>Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br></br>Open hours: Wednesday to Saturday, 10am to 4pm",
   },
   orangaData: {
     orangaCoordinates: { lat: -36.91142, lng: 174.80049 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Oranga</h1><p>Phone number:</p><h5>0508 74748244 (ext 4)</h5>Oranga Information Centre at 34 Oranga Avenue.</br></br>Open hours: Thursday to Saturday 10am to 4pm",
   },
   catalinaBayData: {
     catalinaBayCoordinates: { lat: -36.78879, lng: 174.67151 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Catalina Bay</h1><p>Phone number:</p><h5>0508 74748244 (ext 6)</h5>",
   },
   mangereWestData: {
     mangereWestCoordinates: { lat: -36.96161, lng: 174.79355 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Mangere West</h1><p>Phone number:</p><h5>0508 74748244 (ext 5)</h5> Mangere Info centre, 12 Waddon Place.</br></br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
   aorereData: {
     aorereCoordinates: { lat: -36.97418, lng: 174.82487 },
-    contentString: "<h1>Hello Northcote!</h1>",
+    contentString: "<h1>Aorere</h1><p>Phone number:</p><h5>0508 74748244 (ext 5)</h5> Mangere Info centre, 12 Waddon Place.</br></br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
 };
 
@@ -267,7 +267,7 @@ function initialize() {
         border: "none",
         textAlign: "center",
         fontSize: "12pt",
-        fontFamily: "fieldwork-hum",
+        fontFamily: "fieldwork-hum, arial",
         fontWeight: "600",
         width: "100px",
       },
@@ -299,7 +299,7 @@ function initialize() {
 
   const northcoteWindow = new google.maps.InfoWindow({
     content: mapData.northcoteData.contentString,
-    maxWidth: 200,
+    
   });
   const northcote = new google.maps.Marker({
     position: mapData.northcoteData.northcoteCoordinates,
@@ -316,7 +316,7 @@ function initialize() {
 
   const roskillSouthWindow = new google.maps.InfoWindow({
     content: mapData.roskillSouthData.contentString,
-    maxWidth: 200,
+    
   });
   const roskillSouth = new google.maps.Marker({
     position: mapData.roskillSouthData.roskillSouthCoordinates,
@@ -333,7 +333,7 @@ function initialize() {
 
   const owairakaWindow = new google.maps.InfoWindow({
     content: mapData.owairakaData.contentString,
-    maxWidth: 200,
+    
   });
   const owairaka = new google.maps.Marker({
     position: mapData.owairakaData.owairakaCoordinates,
@@ -350,7 +350,7 @@ function initialize() {
 
   const waikowhaiWindow = new google.maps.InfoWindow({
     content: mapData.waikowhaiData.contentString,
-    maxWidth: 200,
+    
   });
   const waikowhai = new google.maps.Marker({
     position: mapData.waikowhaiData.waikowhaiCoordinates,
@@ -384,7 +384,7 @@ function initialize() {
 
   const catalinaBayWindow = new google.maps.InfoWindow({
     content: mapData.catalinaBayData.contentString,
-    maxWidth: 200,
+    
   });
   const catalinaBay = new google.maps.Marker({
     position: mapData.catalinaBayData.catalinaBayCoordinates,
@@ -401,7 +401,7 @@ function initialize() {
 
   const mangereWestWindow = new google.maps.InfoWindow({
     content: mapData.mangereWestData.contentString,
-    maxWidth: 200,
+    
   });
   const mangereWest = new google.maps.Marker({
     position: mapData.mangereWestData.mangereWestCoordinates,
@@ -418,7 +418,7 @@ function initialize() {
 
   const aorereWindow = new google.maps.InfoWindow({
     content: mapData.aorereData.contentString,
-    maxWidth: 200,
+    
   });
   const aorere = new google.maps.Marker({
     position: mapData.aorereData.aorereCoordinates,

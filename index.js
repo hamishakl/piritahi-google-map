@@ -3,35 +3,35 @@ let map, popup, Popup;
 const mapData = {
   northcoteData: {
     northcoteCoordinates: { lat: -36.79864, lng: 174.74447 },
-    contentString: "<h1>Northcote</h1><p>Phone number:</p><h5>0508 74748244 (ext 1)</h5> Northcote Info Cube, Northcote town centre.</br></br>Open hours: Wednesday - Saturday 10am - 4pm",
+    contentString: "<h3 style='color:#49b758'>Northcote</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 1)</h4><h4>Northcote@piritahi.nz</h4></br> Northcote Information Cube, Northcote town centre.</br>Open hours: Wednesday - Saturday 10am - 4pm",
   },
   roskillSouthData: {
     roskillSouthCoordinates: { lat: -36.91524, lng: 174.73542 },
-    contentString: "<h1>Roskill South</h1><p>Phone number:</p><h5>0508 74748244 (ext 2)</h5>Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br></br>Open hours: Wednesday to Saturday, 10am to 4pm",
+    contentString: "<h3 style='color:#49b758'>Roskill South</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 2)</h4><h4>roskillsouth@piritahi.nz</h4></br>Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br>Open hours: Wednesday to Saturday, 10am to 4pm",
   },
   owairakaData: {
     owairakaCoordinates: { lat: -36.89212, lng: 174.72037 },
-    contentString: "<h1>Ōwairaka</h1><p>Phone number:</p><h5>0508 74748244 (ext 3)</h5> Owairaka Info Cube at 93 Richardson Road.</br></br>Open hours: Thursday and Saturday 10.00 am – 4.00 pm",
+    contentString: "<h3 style='color:#49b758'>Ōwairaka</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 3)</h4><h4>owairaka@piritahi.nz</h4></br> Owairaka Information Cube at 93 Richardson Road.</br>Open hours: Thursday and Saturday 10.00 am – 4.00 pm",
   },
   waikowhaiData: {
     waikowhaiCoordinates: { lat: -36.92616, lng: 174.74048 },
-    contentString: "<h1>Waikōwhai</h1><p>Phone number:</p><h5>0508 74748244 (ext 2)</h5>Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br></br>Open hours: Wednesday to Saturday, 10am to 4pm",
+    contentString: "<h3 style='color:#49b758'>Waikōwhai</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 2)</h4><h4>waikowhai@piritahi.nz</h4></br><Roskill South Information Centre at 142 May Road (corner of May Road and Glynn Street).</br>Open hours: Wednesday to Saturday, 10am to 4pm",
   },
   orangaData: {
     orangaCoordinates: { lat: -36.91142, lng: 174.80049 },
-    contentString: "<h1>Oranga</h1><p>Phone number:</p><h5>0508 74748244 (ext 4)</h5>Oranga Information Centre at 34 Oranga Avenue.</br></br>Open hours: Thursday to Saturday 10am to 4pm",
+    contentString: "<h3 style='color:#49b758'>Oranga</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 4)</h4><h4>oranga@piritahi.nz</h4></br>Oranga Information Centre at 34 Oranga Avenue.</br>Open hours: Thursday to Saturday 10am to 4pm",
   },
   catalinaBayData: {
     catalinaBayCoordinates: { lat: -36.78879, lng: 174.67151 },
-    contentString: "<h1>Catalina Bay</h1><p>Phone number:</p><h5>0508 74748244 (ext 6)</h5>",
+    contentString: "<h3 style='color:#49b758'>Catalina Bay</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 6)</h4><h4>hobsonville@piritahi.nz</h4>",
   },
   mangereWestData: {
     mangereWestCoordinates: { lat: -36.96161, lng: 174.79355 },
-    contentString: "<h1>Mangere West</h1><p>Phone number:</p><h5>0508 74748244 (ext 5)</h5> Mangere Info centre, 12 Waddon Place.</br></br>Open hours: Wednesday to Saturday 10am - 4pm",
+    contentString: "<h3 style='color:#49b758'>Mangere West</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>mangerewest@piritahi.nz</h4></br> Mangere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
   aorereData: {
     aorereCoordinates: { lat: -36.97418, lng: 174.82487 },
-    contentString: "<h1>Aorere</h1><p>Phone number:</p><h5>0508 74748244 (ext 5)</h5> Mangere Info centre, 12 Waddon Place.</br></br>Open hours: Wednesday to Saturday 10am - 4pm",
+    contentString: "<h3 style='color:#49b758'>Aorere</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>aorere@piritahi.nz</h4></br> Mangere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
 };
 
@@ -312,6 +312,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != northcoteWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const roskillSouthWindow = new google.maps.InfoWindow({
@@ -329,6 +334,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != roskillSouthWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const owairakaWindow = new google.maps.InfoWindow({
@@ -346,6 +356,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != owairakaWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const waikowhaiWindow = new google.maps.InfoWindow({
@@ -363,6 +378,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != waikowhaiWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const orangaWindow = new google.maps.InfoWindow({
@@ -380,6 +400,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != orangaWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const catalinaBayWindow = new google.maps.InfoWindow({
@@ -397,6 +422,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != catalinaBayWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const mangereWestWindow = new google.maps.InfoWindow({
@@ -414,6 +444,11 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != mangereWestWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
 
   const aorereWindow = new google.maps.InfoWindow({
@@ -431,8 +466,30 @@ function initialize() {
       map,
       shouldFocus: false,
     });
+    for (let i = 0; i < InfoWindows.length; i++) {
+      if (InfoWindows[i] != aorereWindow) {
+        InfoWindows[i].close()
+      }
+    }
   });
+
+  const InfoWindows = [
+    mangereWestWindow,
+    aorereWindow,
+    northcoteWindow,
+    catalinaBayWindow,
+    owairakaWindow,
+    roskillSouthWindow,
+    waikowhaiWindow,
+    orangaWindow
+  ]
+  map.addListener("click", () => {
+    InfoWindows.forEach(element => {
+      element.close()
+    });
+  })
 }
+
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map-canvas"), {

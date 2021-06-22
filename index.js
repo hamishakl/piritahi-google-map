@@ -1,47 +1,39 @@
 let map, popup, Popup;
 
 const mapData = {
-     northcoteData: {
-         northcoteCoordinates: { lat: -36.79864, lng: 174.74447},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     roskillSouthData: {
-         roskillSouthCoordinates: { lat: -36.91524,
-        lng: 174.73542,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     owairakaData: {
-         owairakaCoordinates: { lat: -36.89212,
-        lng: 174.72037,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     waikowhaiData: {
-         waikowhaiCoordinates: { lat: -36.92616,
-        lng: 174.74048,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     orangaData: {
-         orangaCoordinates: { lat: -36.91142,
-        lng: 174.80049,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     catalinaBayData: {
-         catalinaBayCoordinates: { lat: -36.78879,
-        lng: 174.67151,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     mangereWestData: {
-         mangereWestCoordinates: { lat: -36.96161,
-        lng: 174.79355,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-     aorereData: {
-         aorereCoordinates: { lat: -36.97418,
-        lng: 174.82487,},
-         contentString: "<h1>Hello Northcote!</h1>"
-      },
-    
- }
+  northcoteData: {
+    northcoteCoordinates: { lat: -36.79864, lng: 174.74447 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  roskillSouthData: {
+    roskillSouthCoordinates: { lat: -36.91524, lng: 174.73542 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  owairakaData: {
+    owairakaCoordinates: { lat: -36.89212, lng: 174.72037 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  waikowhaiData: {
+    waikowhaiCoordinates: { lat: -36.92616, lng: 174.74048 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  orangaData: {
+    orangaCoordinates: { lat: -36.91142, lng: 174.80049 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  catalinaBayData: {
+    catalinaBayCoordinates: { lat: -36.78879, lng: 174.67151 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  mangereWestData: {
+    mangereWestCoordinates: { lat: -36.96161, lng: 174.79355 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+  aorereData: {
+    aorereCoordinates: { lat: -36.97418, lng: 174.82487 },
+    contentString: "<h1>Hello Northcote!</h1>",
+  },
+};
 
 function initialize() {
   var MY_MAPTYPE_ID = "custom_style";
@@ -275,6 +267,8 @@ function initialize() {
         border: "none",
         textAlign: "center",
         fontSize: "12pt",
+        fontFamily: "fieldwork-hum",
+        fontWeight: "600",
         width: "100px",
       },
       disableAutoPan: true,
@@ -300,14 +294,8 @@ function initialize() {
       map: map,
       animation: google.maps.Animation.DROP,
 
-      // icon: {
-      //   path: google.maps.SymbolPath.CIRCLE,
-      //   scale: 3
-      // }
     });
   }
-
-  
 
   const northcoteWindow = new google.maps.InfoWindow({
     content: mapData.northcoteData.contentString,
@@ -316,7 +304,7 @@ function initialize() {
   const northcote = new google.maps.Marker({
     position: mapData.northcoteData.northcoteCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   northcote.addListener("click", () => {
     northcoteWindow.open({
@@ -333,7 +321,7 @@ function initialize() {
   const roskillSouth = new google.maps.Marker({
     position: mapData.roskillSouthData.roskillSouthCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   roskillSouth.addListener("click", () => {
     roskillSouthWindow.open({
@@ -350,7 +338,7 @@ function initialize() {
   const owairaka = new google.maps.Marker({
     position: mapData.owairakaData.owairakaCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   owairaka.addListener("click", () => {
     owairakaWindow.open({
@@ -367,7 +355,7 @@ function initialize() {
   const waikowhai = new google.maps.Marker({
     position: mapData.waikowhaiData.waikowhaiCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   waikowhai.addListener("click", () => {
     waikowhaiWindow.open({
@@ -384,7 +372,7 @@ function initialize() {
   const oranga = new google.maps.Marker({
     position: mapData.orangaData.orangaCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   oranga.addListener("click", () => {
     orangaWindow.open({
@@ -401,7 +389,7 @@ function initialize() {
   const catalinaBay = new google.maps.Marker({
     position: mapData.catalinaBayData.catalinaBayCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   catalinaBay.addListener("click", () => {
     catalinaBayWindow.open({
@@ -418,7 +406,7 @@ function initialize() {
   const mangereWest = new google.maps.Marker({
     position: mapData.mangereWestData.mangereWestCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   mangereWest.addListener("click", () => {
     mangereWestWindow.open({
@@ -435,7 +423,7 @@ function initialize() {
   const aorere = new google.maps.Marker({
     position: mapData.aorereData.aorereCoordinates,
     map,
-    animation: google.maps.Animation.DROP
+    animation: google.maps.Animation.DROP,
   });
   aorere.addListener("click", () => {
     aorereWindow.open({
@@ -444,8 +432,6 @@ function initialize() {
       shouldFocus: false,
     });
   });
-
-
 }
 
 function initMap() {

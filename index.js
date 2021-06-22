@@ -1,10 +1,46 @@
 let map, popup, Popup;
 
 const mapData = {
-    northcoteData: {
-        northcoteCoordinates: { lat: -36.79864, lng: 174.74447},
-        contentString: "<h1>Hello Northcote!</h1>"
-     },
+     northcoteData: {
+         northcoteCoordinates: { lat: -36.79864, lng: 174.74447},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     roskillSouthData: {
+         roskillSouthCoordinates: { lat: -36.91524,
+        lng: 174.73542,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     owairakaData: {
+         owairakaCoordinates: { lat: -36.89212,
+        lng: 174.72037,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     waikowhaiData: {
+         waikowhaiCoordinates: { lat: -36.92616,
+        lng: 174.74048,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     orangaData: {
+         orangaCoordinates: { lat: -36.91142,
+        lng: 174.80049,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     catalinaBayData: {
+         catalinaBayCoordinates: { lat: -36.78879,
+        lng: 174.67151,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     mangereWestData: {
+         mangereWestCoordinates: { lat: -36.96161,
+        lng: 174.79355,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+     aorereData: {
+         aorereCoordinates: { lat: -36.97418,
+        lng: 174.82487,},
+         contentString: "<h1>Hello Northcote!</h1>"
+      },
+    
  }
 
 function initialize() {
@@ -289,6 +325,127 @@ function initialize() {
       shouldFocus: false,
     });
   });
+
+  const roskillSouthWindow = new google.maps.InfoWindow({
+    content: mapData.roskillSouthData.contentString,
+    maxWidth: 200,
+  });
+  const roskillSouth = new google.maps.Marker({
+    position: mapData.roskillSouthData.roskillSouthCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  roskillSouth.addListener("click", () => {
+    roskillSouthWindow.open({
+      anchor: roskillSouth,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const owairakaWindow = new google.maps.InfoWindow({
+    content: mapData.owairakaData.contentString,
+    maxWidth: 200,
+  });
+  const owairaka = new google.maps.Marker({
+    position: mapData.owairakaData.owairakaCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  owairaka.addListener("click", () => {
+    owairakaWindow.open({
+      anchor: owairaka,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const waikowhaiWindow = new google.maps.InfoWindow({
+    content: mapData.waikowhaiData.contentString,
+    maxWidth: 200,
+  });
+  const waikowhai = new google.maps.Marker({
+    position: mapData.waikowhaiData.waikowhaiCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  waikowhai.addListener("click", () => {
+    waikowhaiWindow.open({
+      anchor: waikowhai,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const orangaWindow = new google.maps.InfoWindow({
+    content: mapData.orangaData.contentString,
+    maxWidth: 200,
+  });
+  const oranga = new google.maps.Marker({
+    position: mapData.orangaData.orangaCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  oranga.addListener("click", () => {
+    orangaWindow.open({
+      anchor: oranga,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const catalinaBayWindow = new google.maps.InfoWindow({
+    content: mapData.catalinaBayData.contentString,
+    maxWidth: 200,
+  });
+  const catalinaBay = new google.maps.Marker({
+    position: mapData.catalinaBayData.catalinaBayCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  catalinaBay.addListener("click", () => {
+    catalinaBayWindow.open({
+      anchor: catalinaBay,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const mangereWestWindow = new google.maps.InfoWindow({
+    content: mapData.mangereWestData.contentString,
+    maxWidth: 200,
+  });
+  const mangereWest = new google.maps.Marker({
+    position: mapData.mangereWestData.mangereWestCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  mangereWest.addListener("click", () => {
+    mangereWestWindow.open({
+      anchor: mangereWest,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+  const aorereWindow = new google.maps.InfoWindow({
+    content: mapData.aorereData.contentString,
+    maxWidth: 200,
+  });
+  const aorere = new google.maps.Marker({
+    position: mapData.aorereData.aorereCoordinates,
+    map,
+    animation: google.maps.Animation.DROP
+  });
+  aorere.addListener("click", () => {
+    aorereWindow.open({
+      anchor: aorere,
+      map,
+      shouldFocus: false,
+    });
+  });
+
+
 }
 
 function initMap() {

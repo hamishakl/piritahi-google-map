@@ -174,7 +174,7 @@ function initialize() {
       mapTypeIds: [google.maps.MapTypeId.TERRAIN, MY_MAPTYPE_ID],
     },
     mapTypeId: MY_MAPTYPE_ID,
-    zoom: 6,
+    zoom: 8,
     center: { lat: -36.84, lng: 174.76 },
     disableDefaultUI: true,
   };

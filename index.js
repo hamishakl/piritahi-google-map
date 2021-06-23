@@ -168,14 +168,14 @@ function initialize() {
   ];
 
   var mapOptions = {
-    zoom: 3,
+    zoom: 4,
     center: new google.maps.LatLng(0, -180),
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.TERRAIN, MY_MAPTYPE_ID],
     },
     mapTypeId: MY_MAPTYPE_ID,
-    zoom: 8,
-    center: { lat: -36.84, lng: 174.76 },
+    zoom: 10.5,
+    center: { lat: -36.90, lng: 174.75 },
     disableDefaultUI: true,
   };
 

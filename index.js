@@ -498,4 +498,8 @@ function initMap() {
   });
 }
 
+let test = () => {
+  console.log('it works')
+}
+
 google.maps.event.addDomListener(window, "load", initialize);

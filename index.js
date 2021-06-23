@@ -387,7 +387,6 @@ function initialize() {
 
   const orangaWindow = new google.maps.InfoWindow({
     content: mapData.orangaData.contentString,
-    maxWidth: 200,
   });
   const oranga = new google.maps.Marker({
     position: mapData.orangaData.orangaCoordinates,

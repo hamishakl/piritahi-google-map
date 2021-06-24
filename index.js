@@ -27,11 +27,11 @@ const mapData = {
   },
   mangereWestData: {
     mangereWestCoordinates: { lat: -36.96161, lng: 174.79355 },
-    contentString: "<h3 style='color:#49b758'>Mangere West</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>mangerewest@piritahi.nz</h4></br> Mangere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
+    contentString: "<h3 style='color:#49b758'>Māngere West</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>mangerewest@piritahi.nz</h4></br> Māngere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
   aorereData: {
     aorereCoordinates: { lat: -36.97418, lng: 174.82487 },
-    contentString: "<h3 style='color:#49b758'>Aorere</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>aorere@piritahi.nz</h4></br> Mangere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
+    contentString: "<h3 style='color:#49b758'>Aorere</h3><p>For questions about civil works, contact us on:</p><h4>0508 74748244 (ext 5)</h4><h4>aorere@piritahi.nz</h4></br> Māngere Information Centre, 12 Waddon Place.</br>Open hours: Wednesday to Saturday 10am - 4pm",
   },
 };
 

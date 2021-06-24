@@ -250,7 +250,7 @@ function initialize() {
       {
         lat: -36.96161,
         lng: 174.79355,
-        name: "Mangere West",
+        name: "Māngere West",
       },
       {
         lat: -36.97418,

@@ -503,3 +503,10 @@ let test = () => {
 }
 
 google.maps.event.addDomListener(window, "load", initialize);
+
+
+function makeRequest(a) {
+  return new Promise((resolve, reject)=> {
+    console.log(`making request to ${url}`)
+  })
+}

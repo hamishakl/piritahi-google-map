@@ -18,91 +18,111 @@ exports.webflowMail = functions.https.onRequest((req, res) => {
   const message = req.body.message;
   const recipient = req.body.recipient;
 
-  let findEmailRecipient = (a) => {
+  const findEmailRecipient = (a) => {
     if (a == "Roskill South") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "roskillsouth@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Ōwairaka") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "owairaka@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Waikōwhai") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "waikowhai@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Oranga") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "oranga@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Northcote") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "Northcote@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Catalina Bay") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "hobsonville@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Mangere West") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "mangerewest@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "Aorere") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "aorere@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else if (a == "General" || a == "Other") {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "info@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     } else {
-      let options = {
+      const options = {
         from: "hamishjustin7@gmail.com",
         to: "info@piritahi.nz",
         subject: subject,
-        html: `<b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}`,
+        html: `
+        <b>Message sent from ${name}</b><br><br>${message}</br><br>${recipient}
+        `,
       };
       return options;
     }
   };
 
-  transporter.sendMail(findEmailRecipient(recipient), function (err) {
+  transporter.sendMail(findEmailRecipient(recipient), function(err) {
     // Error
     if (err) {
       console.log(err);

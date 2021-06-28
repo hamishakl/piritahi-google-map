@@ -118,12 +118,12 @@ exports.webflowMail = functions.https.onRequest((req, res) => {
     // Error
     if (err) {
       console.log(err);
-      return res.redirect("https://copy-of-piritahi.webflow.io/error");
+      return res.redirect("www.piritahi.nz/error");
     }
 
     // Success
     return res.redirect(
-      "https://copy-of-piritahi.webflow.io/submission-success"
+      "www.piritahi.nz/submission-success"
     );
   });
 });

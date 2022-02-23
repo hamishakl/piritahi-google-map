@@ -1,44 +1,5 @@
 //waikowhai 
-var myCoordinates = [
-    new google.maps.LatLng(-36.920604,174.736361),
-    new google.maps.LatLng(-36.922834,174.734323),
-    new google.maps.LatLng(-36.925494,174.735053),
-    new google.maps.LatLng(-36.926248,174.736191),
-    new google.maps.LatLng(-36.928753,174.736126),
-    new google.maps.LatLng(-36.929542,174.735247),
-    new google.maps.LatLng(-36.930262,174.735504),
-    new google.maps.LatLng(-36.930279,174.736298),
-    new google.maps.LatLng(-36.930451,174.737028),
-    new google.maps.LatLng(-36.930657,174.737779),
-    new google.maps.LatLng(-36.930605,174.738229),
-    new google.maps.LatLng(-36.930297,174.739259),
-    new google.maps.LatLng(-36.930194,174.740783),
-    new google.maps.LatLng(-36.930485,174.741598),
-    new google.maps.LatLng(-36.930434,174.742220),
-    new google.maps.LatLng(-36.930262,174.743057),
-    new google.maps.LatLng(-36.930194,174.740246),
-    new google.maps.LatLng(-36.929953,174.744988),
-    new google.maps.LatLng(-36.929851,174.745439),
-    new google.maps.LatLng(-36.929799,174.745782),
-    new google.maps.LatLng(-36.929439,174.746404),
-    new google.maps.LatLng(-36.928993,174.746941),
-    new google.maps.LatLng(-36.928787,174.747198),
-    new google.maps.LatLng(-36.928582,174.747670),
-    new google.maps.LatLng(-36.926935,174.749902),
-    new google.maps.LatLng(-36.926369,174.750567),
-    new google.maps.LatLng(-36.923298,174.741533),
-    new google.maps.LatLng(-36.922183,174.738272),
-    new google.maps.LatLng(-36.920656,174.736383)
-    ];
-    var polyOptions = {
-    path: myCoordinates,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1,
-    strokeWeight: 3
-    }
-    var it = new google.maps.Polyline(polyOptions);
-    it.setMap(map);
-    
+
 
 //roskillsouth 
 var myCoordinates = [
@@ -144,52 +105,5 @@ var myCoordinates = [
 
     
 //owairaka 
-var myCoordinates = [
-    new google.maps.LatLng(-36.901318,174.716507),
-    new google.maps.LatLng(-36.901541,174.715927),
-    new google.maps.LatLng(-36.901301,174.715541),
-    new google.maps.LatLng(-36.900426,174.715241),
-    new google.maps.LatLng(-36.899980,174.712966),
-    new google.maps.LatLng(-36.900357,174.712151),
-    new google.maps.LatLng(-36.900374,174.711593),
-    new google.maps.LatLng(-36.900374,174.711228),
-    new google.maps.LatLng(-36.899637,174.711421),
-    new google.maps.LatLng(-36.899499,174.711421),
-    new google.maps.LatLng(-36.898590,174.711893),
-    new google.maps.LatLng(-36.898453,174.711893),
-    new google.maps.LatLng(-36.898916,174.709576),
-    new google.maps.LatLng(-36.899379,174.708589),
-    new google.maps.LatLng(-36.899259,174.707408),
-    new google.maps.LatLng(-36.899070,174.707301),
-    new google.maps.LatLng(-36.898384,174.707988),
-    new google.maps.LatLng(-36.897938,174.707966),
-    new google.maps.LatLng(-36.897509,174.708653),
-    new google.maps.LatLng(-36.897166,174.708717),
-    new google.maps.LatLng(-36.896994,174.708374),
-    new google.maps.LatLng(-36.896942,174.708052),
-    new google.maps.LatLng(-36.892086,174.713030),
-    new google.maps.LatLng(-36.894248,174.715262),
-    new google.maps.LatLng(-36.894694,174.716335),
-    new google.maps.LatLng(-36.895398,174.720004),
-    new google.maps.LatLng(-36.894849,174.722472),
-    new google.maps.LatLng(-36.894797,174.722772),
-    new google.maps.LatLng(-36.896290,174.723201),
-    new google.maps.LatLng(-36.897011,174.719940),
-    new google.maps.LatLng(-36.897646,174.718438),
-    new google.maps.LatLng(-36.898453,174.717107),
-    new google.maps.LatLng(-36.899002,174.717601),
-    new google.maps.LatLng(-36.899087,174.717687),
-    new google.maps.LatLng(-36.899860,174.716957),
-    new google.maps.LatLng(-36.900186,174.716571),
-    new google.maps.LatLng(-36.901301,174.716592),
-    new google.maps.LatLng(-36.901299,174.716516)
-    ];
-    var polyOptions = {
-    path: myCoordinates,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1,
-    strokeWeight: 3
-    }
-    var it = new google.maps.Polyline(polyOptions);
-    it.setMap(map);
+
     

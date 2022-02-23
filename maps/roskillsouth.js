@@ -3,8 +3,11 @@ let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     mapId: 'fde6c3f6f5a3dea0',
-    center: {lat: -36.995463,lng: 174.899743 },
-    zoom: 12,
+    center: {lat: -36.914970,lng: 174.735104},
+    zoom: 15,
+    gestureHandling: "none",
+    zoomControl: false,
+    disableDefaultUI: true,
   });
 
   var myCoordinates = [

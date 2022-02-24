@@ -1,5 +1,5 @@
 let map;
-
+console.log('js file loaded ')
 function initMap() {
   const CENTER = {lat: -36.914970,lng: 174.735104}
 

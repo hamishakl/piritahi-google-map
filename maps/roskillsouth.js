@@ -1,14 +1,27 @@
 let map;
 
 function initMap() {
+  const CENTER = {lat: -36.914970,lng: 174.735104}
+
+  const MAPBOUNDS = {
+    north: (CENTER.lat)*0.9995,
+    south: (CENTER.lat)*1.0005,
+    west: (CENTER.lng)*0.9999,
+    east: (CENTER.lng)*1.0001,
+  };
+
   map = new google.maps.Map(document.getElementById("map"), {
     mapId: 'fde6c3f6f5a3dea0',
-    center: {lat: -36.914970,lng: 174.735104},
+    center: CENTER,
     zoom: 15,
-    gestureHandling: "none",
-    zoomControl: false,
     disableDefaultUI: true,
+    restriction: {
+      latLngBounds: MAPBOUNDS,
+      strictBounds: false,
+    }
   });
+  var opt = { minZoom: 15, maxZoom: 16 };
+  map.setOptions(opt);
 
   var myCoordinates = [
     new google.maps.LatLng(-36.909764,174.734469),
@@ -29,7 +42,7 @@ function initMap() {
     ];
     var polyOptions = {
     path: myCoordinates,
-    strokeColor: "#FF0000",
+    strokeColor: "#D66642",
     strokeOpacity: 1,
     strokeWeight: 3
     }

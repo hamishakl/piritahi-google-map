@@ -18,6 +18,7 @@ function initMap() {
       strictBounds: false,
     }
   });
+  //test
   var opt = { minZoom: 14, maxZoom: 16 };
   map.setOptions(opt);
   var myCoordinates = [

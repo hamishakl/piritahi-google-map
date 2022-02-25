@@ -20,7 +20,7 @@ function initMap() {
       strictBounds: false,
     }
   });
-  var opt = { minZoom: 15, maxZoom: 18 };
+  var opt = { minZoom: 15, maxZoom: 17 };
   map.setOptions(opt);
 
   var myCoordinates = [
